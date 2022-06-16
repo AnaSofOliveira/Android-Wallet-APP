@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#01C7D2</color>
+    <color name="colorPrimaryDark">#00B2BC</color>
+    <color name="colorAccent">#FF706A</color>
+
+    <!-- Cores despesa -->
+    <color name="colorPrimaryDespesa">#FF706A</color>
+    <color name="colorPrimaryDarkDespesa">#E66560</color>
+    <color name="colorAccentDespesa">#FF706A</color>
+
+    <!-- Cores receita -->
+    <color name="colorPrimaryReceita">#00D39E</color>
+    <color name="colorPrimaryDarkReceita">#00BE8B</color>
+    <color name="colorAccentReceita">#00D39E</color>
+
+    <!-- Cores notificacoes -->
+    <color name="colorPrimaryNotificacao">#AE61E4</color>
+    <color name="colorPrimaryDarkNotificacao">#BE00BB</color>
+    <color name="colorAccentNotificacao">#1CBA92</color>
+
+    <!-- Cores cartões -->
+    <color name="colorCartaoDespesa">#FFCDD2</color>
+    <color name="colorCartaoReceita">#DCEDC8</color>
+
+</resources>

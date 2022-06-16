@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ReceitasActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:background="@color/colorPrimaryReceita"
+        android:gravity="end|bottom"
+        android:orientation="vertical"
+        android:padding="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/editValor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="€ 00.00"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:textAlignment="textEnd"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/outlinedTextField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:hint="Data"
+        android:padding="10dp"
+        android:textColorHint="@android:color/black"
+        app:boxBackgroundColor="@android:color/white"
+        app:boxStrokeColor="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/outlinedTextField2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:startIconDrawable="@drawable/ic_baseline_calendar_today_24"
+        app:startIconTint="@android:color/darker_gray">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:inputType="date"
+            android:textColor="@android:color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/outlinedTextField2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Categoria"
+        android:padding="10dp"
+        android:textColorHint="@android:color/black"
+        app:boxBackgroundColor="@android:color/white"
+        app:boxStrokeColor="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/outlinedTextField3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outlinedTextField"
+        app:startIconDrawable="@drawable/ic_baseline_category_24"
+        app:startIconTint="@android:color/darker_gray">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="@android:color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/outlinedTextField3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descrição"
+        android:padding="10dp"
+        android:textColorHint="@android:color/black"
+        app:boxBackgroundColor="@android:color/white"
+        app:boxStrokeColor="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outlinedTextField2"
+        app:startIconDrawable="@drawable/ic_baseline_description_24"
+        app:startIconTint="@android:color/darker_gray">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editDescricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="@android:color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fabGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_baseline_check_24"
+        app:fab_colorNormal="@color/colorPrimaryReceita"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

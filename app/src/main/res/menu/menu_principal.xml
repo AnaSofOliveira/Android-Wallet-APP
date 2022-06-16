@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_sair"
+        android:orderInCategory="100"
+        android:title="Sair"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/menu_config_notif"
+        android:orderInCategory="2"
+        android:title="Configurar Notificacao"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/menu_perfil"
+        android:orderInCategory="1"
+        android:title="Editar Perfil"
+        app:showAsAction="never"
+        />
+</menu>

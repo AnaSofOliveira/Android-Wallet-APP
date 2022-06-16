@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.PerfilActivity">
+
+    <include layout="@layout/perfil_toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imagemPerfil"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_avatar"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:id="@+id/alterarFoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Alterar foto"
+            android:textColor="@color/colorAccent"
+            android:textSize="20dp" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchIsPremium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Utilizador Premium"
+            android:layout_margin="20dp"
+            android:textSize="18dp"
+            android:checked="false"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/outlinedEditNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Nome"
+            android:textColorHint="@android:color/black"
+            app:boxBackgroundColor="@android:color/transparent"
+            app:boxStrokeColor="@android:color/darker_gray"
+            app:startIconDrawable="@drawable/ic_pessoa_cinza_24"
+            app:startIconTint="@android:color/darker_gray">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="@android:color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/outlinedEditEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="E-mail"
+            android:textColorHint="@android:color/black"
+            app:boxBackgroundColor="@android:color/transparent"
+            app:boxStrokeColor="@android:color/darker_gray"
+            app:startIconDrawable="@drawable/ic_email_cinza_24"
+            app:startIconTint="@android:color/darker_gray">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:editable="false"
+                android:textColor="@android:color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonGuardar"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:text="Guardar Alterações"
+            android:textColor="@android:color/white"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>

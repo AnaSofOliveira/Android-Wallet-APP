@@ -1,0 +1,40 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Wallet" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#01C7D2</item>
+        <item name="colorPrimaryDark">#00B2BC</item>
+        <item name="colorAccent">#FF706A</item>
+    </style>
+
+    <!-- Tema Despesas -->
+    <style name="DespesaTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimaryDespesa</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkDespesa</item>
+        <item name="colorAccent">@color/colorAccentDespesa</item>
+    </style>
+
+    <!-- Tema Receitas -->
+    <style name="ReceitaTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimaryReceita</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkReceita</item>
+        <item name="colorAccent">@color/colorAccentReceita</item>
+    </style>
+
+
+    <style name="HomeTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#01C7D2</item>
+        <item name="colorPrimaryDark">#00B2BC</item>
+        <item name="colorAccent">#FF706A</item>
+    </style>
+
+    <!-- Tema Calendário -->
+    <style name="CalendarTheme" parent="TextAppearance.MaterialCalendarWidget.Date">
+        <item name="android:textColor">@color/mcv_text_date_light</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+</resources>
