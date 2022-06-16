@@ -203,9 +203,6 @@ public class HomeActivity extends AppCompatActivity {
         FirebaseUser utilizador = UtilizadorFirebase.getUtilizadorAtual();
         String idUtilizador = utilizador.getUid();
 
-//        String emailUtilizador = autenticacao.getCurrentUser().getEmail();
-//        String idUtilizador = Base64Custom.codificaBase64(emailUtilizador);
-
         refMovimentacao = firebase.child("movimentacao")
                                 .child(idUtilizador)
                                 .child(mesAnoSelecionado);

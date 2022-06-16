@@ -69,7 +69,6 @@ public class PerfilActivity extends AppCompatActivity {
         storageRef = ConfiguracaoFirebase.getFirebaseStorage();
         idUtilizador = UtilizadorFirebase.getIdentificadorUtilizador();
 
-
         alterarFoto = findViewById(R.id.alterarFoto);
         isPremiumSwitch = findViewById(R.id.switchIsPremium);
         textoNome = findViewById(R.id.editNome);
@@ -106,7 +105,7 @@ public class PerfilActivity extends AppCompatActivity {
                 guardarEstadoPremium(estado);
 
                 Toast.makeText(PerfilActivity.this,
-                        "Dados alterados com sucesso!",
+                        "Dados alterados com sucesso! Premium" + estado ,
                         Toast.LENGTH_SHORT).show();
             }
         });
@@ -235,7 +234,6 @@ public class PerfilActivity extends AppCompatActivity {
 
         FirebaseUser perfilUser = UtilizadorFirebase.getUtilizadorAtual();
 
-
         String nome = perfilUser.getDisplayName();
         String email = perfilUser.getEmail();
 
@@ -252,6 +250,8 @@ public class PerfilActivity extends AppCompatActivity {
         }else{
             imagemPerfil.setImageResource(R.drawable.ic_avatar);
         }
+
+
     }
 
     private void logout(){
