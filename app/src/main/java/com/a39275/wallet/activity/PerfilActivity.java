@@ -29,6 +29,8 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.StorageReference;
@@ -104,13 +106,39 @@ public class PerfilActivity extends AppCompatActivity {
 
                 guardarEstadoPremium(estado);
 
-                Toast.makeText(PerfilActivity.this,
-                        "Dados alterados com sucesso! Premium" + estado ,
-                        Toast.LENGTH_SHORT).show();
+                finish();
+//                Toast.makeText(PerfilActivity.this,
+//                        "Dados alterados com sucesso!",
+//                        Toast.LENGTH_SHORT).show();
             }
         });
 
         alterarFoto();
+    }
+
+    private void obterUtilizador() {
+
+        utilizador = UtilizadorFirebase.getDadosUtilizadorLogado();
+//
+//        FirebaseUser user = UtilizadorFirebase.getUtilizadorAtual();
+//        String idUtilizador = user.getUid();
+//
+//        DatabaseReference refUtilizador = firebase.child("utilizadores").child(idUtilizador);
+//
+//        refUtilizador.addValueEventListener(new ValueEventListener(){
+//
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                Utilizador u = snapshot.getValue(Utilizador.class);
+//                utilizador = u;
+//            }
+//
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//
+//            }
+//        });
     }
 
     private void guardarEstadoPremium(boolean estado) {
@@ -251,7 +279,36 @@ public class PerfilActivity extends AppCompatActivity {
             imagemPerfil.setImageResource(R.drawable.ic_avatar);
         }
 
+        obterEstadoPremium();
 
+    }
+
+    private boolean obterEstadoPremium() {
+
+        FirebaseUser utilizador = UtilizadorFirebase.getUtilizadorAtual();
+        String idUtilizador = utilizador.getUid();
+
+        DatabaseReference refUtilizador = firebase.child("utilizadores").child(idUtilizador);
+
+        refUtilizador.addValueEventListener(new ValueEventListener(){
+
+            boolean isPremium = false;
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Utilizador utilizador = snapshot.getValue(Utilizador.class);
+                isPremiumSwitch.setChecked(utilizador.isPremium());
+            }
+
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+        return false;
     }
 
     private void logout(){

@@ -9,7 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="15dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary">
 
         <TextView
             android:layout_weight="1"
@@ -26,11 +27,11 @@
             android:id="@+id/logout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Logout"
-            android:textColor="@color/colorPrimaryDespesa"
             android:layout_alignParentRight="true"
-            android:textStyle="normal"
-            android:textSize="20dp"/>
+            android:text="Terminar Sessão"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:textStyle="normal" />
 
     </LinearLayout>
 

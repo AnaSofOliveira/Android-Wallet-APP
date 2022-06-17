@@ -83,11 +83,12 @@ public class RegistoActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
 
-                    UtilizadorFirebase.atualizarNomeUtilizador(utilizador.getNome());
-
                     utilizador.setPremium(false);
                     utilizador.setIdUtilizador(autenticacao.getUid());
                     utilizador.guardar();
+
+                    UtilizadorFirebase.atualizarNomeUtilizador(utilizador.getNome());
+
                     finish();
 
                 }else {

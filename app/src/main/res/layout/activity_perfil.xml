@@ -37,7 +37,7 @@
             android:id="@+id/switchIsPremium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Utilizador Premium"
+            android:text="Premium"
             android:layout_margin="20dp"
             android:textSize="18dp"
             android:checked="false"/>
