@@ -58,16 +58,13 @@ public class PerfilActivity extends AppCompatActivity {
     Button guardarAlteracoes;
     SwitchMaterial isPremiumSwitch;
     private StorageReference storageRef;
-    private Utilizador utilizador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //getSupportActionBar().hide();
 
         setContentView(R.layout.activity_perfil);
 
-        utilizador = UtilizadorFirebase.getDadosUtilizadorLogado();
         storageRef = ConfiguracaoFirebase.getFirebaseStorage();
         idUtilizador = UtilizadorFirebase.getIdentificadorUtilizador();
 
@@ -97,14 +94,10 @@ public class PerfilActivity extends AppCompatActivity {
 
                 String nomeAtualizado = textoNome.getText().toString();
 
+                Boolean estadoPremium = isPremiumSwitch.isChecked();
+
                 UtilizadorFirebase.atualizarNomeUtilizador(nomeAtualizado);
-
-                utilizador.setNome(nomeAtualizado);
-                utilizador.guardar();
-
-                Boolean estado = isPremiumSwitch.isChecked();
-
-                guardarEstadoPremium(estado);
+                UtilizadorFirebase.atualizarUserPremium(estadoPremium);
 
                 finish();
 //                Toast.makeText(PerfilActivity.this,
@@ -114,31 +107,6 @@ public class PerfilActivity extends AppCompatActivity {
         });
 
         alterarFoto();
-    }
-
-    private void obterUtilizador() {
-
-        utilizador = UtilizadorFirebase.getDadosUtilizadorLogado();
-//
-//        FirebaseUser user = UtilizadorFirebase.getUtilizadorAtual();
-//        String idUtilizador = user.getUid();
-//
-//        DatabaseReference refUtilizador = firebase.child("utilizadores").child(idUtilizador);
-//
-//        refUtilizador.addValueEventListener(new ValueEventListener(){
-//
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                Utilizador u = snapshot.getValue(Utilizador.class);
-//                utilizador = u;
-//            }
-//
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//            }
-//        });
     }
 
     private void guardarEstadoPremium(boolean estado) {
@@ -253,8 +221,7 @@ public class PerfilActivity extends AppCompatActivity {
         UtilizadorFirebase.atualizarFotoUtilizador(url);
 
         // Atualizar foto no firebase
-        utilizador.setSrcFoto(url.toString());
-        utilizador.guardar();
+        UtilizadorFirebase.atualizarFotoSrc(url.toString());
 
     }
 

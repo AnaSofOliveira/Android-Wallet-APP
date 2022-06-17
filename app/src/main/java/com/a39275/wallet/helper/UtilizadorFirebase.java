@@ -12,6 +12,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
+import com.google.firebase.database.DatabaseReference;
 
 public class UtilizadorFirebase {
 
@@ -48,6 +49,14 @@ public class UtilizadorFirebase {
         }catch (Exception e){
             e.printStackTrace();
         }
+
+        FirebaseUser utilizador = UtilizadorFirebase.getUtilizadorAtual();
+        String idUtilizador = utilizador.getUid();
+
+        DatabaseReference refUtilizador = ConfiguracaoFirebase.getFirebaseDatabase().child("utilizadores").child(idUtilizador);
+
+        refUtilizador.child("nome").setValue(name);
+
     }
 
     public static void atualizarFotoUtilizador(Uri url){
@@ -92,5 +101,24 @@ public class UtilizadorFirebase {
 
         return utilizador;
 
+    }
+
+    public static void atualizarUserPremium(Boolean estado) {
+
+        FirebaseUser utilizador = UtilizadorFirebase.getUtilizadorAtual();
+        String idUtilizador = utilizador.getUid();
+
+        DatabaseReference refUtilizador = ConfiguracaoFirebase.getFirebaseDatabase().child("utilizadores").child(idUtilizador);
+
+        refUtilizador.child("premium").setValue(estado);
+    }
+
+    public static void atualizarFotoSrc(String path) {
+        FirebaseUser utilizador = UtilizadorFirebase.getUtilizadorAtual();
+        String idUtilizador = utilizador.getUid();
+
+        DatabaseReference refUtilizador = ConfiguracaoFirebase.getFirebaseDatabase().child("utilizadores").child(idUtilizador);
+
+        refUtilizador.child("srcFoto").setValue(path);
     }
 }

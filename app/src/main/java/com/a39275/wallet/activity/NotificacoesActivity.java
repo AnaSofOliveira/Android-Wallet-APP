@@ -98,11 +98,11 @@ public class NotificacoesActivity extends AppCompatActivity {
         java.text.DateFormat timeFormat = DateFormat.getTimeFormat(this);
 
         new AlertDialog.Builder(this)
-                .setTitle("Notification Scheduled")
+                .setTitle("Notificação Agendada")
                 .setMessage(
-                        "Title: " + title +
-                        "\nMessage: " + message +
-                        "\nAt: " + dateFormat.format(date) + " " + timeFormat.format(date))
+                        "Categoria: " + title +
+                        "\nDescrição: " + message +
+                        "\nData Alerta: " + dateFormat.format(date) + " " + timeFormat.format(date))
                 .show();
     }
 
