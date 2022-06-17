@@ -284,8 +284,8 @@ public class HomeActivity extends AppCompatActivity {
                     startActivity(new Intent(this, NotificacoesActivity.class));
                 }else {
                     new AlertDialog.Builder(this)
-                            .setTitle("Funcionalidade indisponível")
-                            .setMessage("Não é um utilizador Premium!\n Subscreva para conseguir configurar notificações.")
+                            .setTitle("Funcionalidade indisponível!")
+                            .setMessage("Para conseguir adicionar notificações subscreva esta funcionalidade.")
                             .show();
                     }
                 break;
