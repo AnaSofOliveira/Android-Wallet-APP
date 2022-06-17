@@ -47,7 +47,7 @@
                 android:id="@+id/categoria"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Categoria"
+                android:hint="@string/categoria_label"
                 android:textColor="@android:color/black" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -67,7 +67,7 @@
                 android:id="@+id/descricao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Observações"
+                android:hint="@string/descricao_label"
                 android:maxLines="@integer/material_motion_duration_medium_2"
                 android:textColor="@android:color/black" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -111,7 +111,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:padding="20dp"
-            android:text="Agendar Notificação"
+            android:text="@string/notificacao_button"
             android:textColor="@android:color/white" />
     </LinearLayout>
 

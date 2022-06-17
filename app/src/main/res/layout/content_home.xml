@@ -19,7 +19,7 @@
             android:id="@+id/textSaudacao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Carregando..."
+            android:text="@string/loading_label"
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="18sp" />
@@ -28,7 +28,7 @@
             android:id="@+id/textSaldo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="€ 0.00"
+            android:text="@string/valor_despesa_receita_Default"
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="24sp" />
@@ -37,7 +37,7 @@
             android:id="@+id/textView11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Saldo geral"
+            android:text="@string/saldo_geral"
             android:textAlignment="center"
             android:textColor="@android:color/white" />
     </LinearLayout>

@@ -16,7 +16,7 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Perfil Wallet"
+            android:text="@string/perfil_label"
             android:textSize="24dp"
             android:textStyle="bold"
             android:textColor="@android:color/black"
@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:text="Terminar Sessão"
+            android:text="@string/logout_label"
             android:textColor="@android:color/white"
             android:textSize="18dp"
             android:textStyle="normal" />

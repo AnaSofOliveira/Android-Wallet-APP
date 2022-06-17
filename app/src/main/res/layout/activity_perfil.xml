@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center"
-            android:text="Alterar foto"
+            android:text="@string/alterar_foto_label"
             android:textColor="@color/colorAccent"
             android:textSize="20dp" />
 
@@ -37,7 +37,7 @@
             android:id="@+id/switchIsPremium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Premium"
+            android:text="@string/premium_label"
             android:layout_margin="20dp"
             android:textSize="18dp"
             android:checked="false"/>
@@ -48,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:hint="Nome"
+            android:hint="@string/nome_label"
             android:textColorHint="@android:color/black"
             app:boxBackgroundColor="@android:color/transparent"
             app:boxStrokeColor="@android:color/darker_gray"
@@ -70,7 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:hint="E-mail"
+            android:hint="@string/email_label"
             android:textColorHint="@android:color/black"
             app:boxBackgroundColor="@android:color/transparent"
             app:boxStrokeColor="@android:color/darker_gray"
@@ -96,7 +96,7 @@
             android:backgroundTint="@color/colorPrimary"
             android:layout_marginLeft="45dp"
             android:layout_marginRight="45dp"
-            android:text="Guardar Alterações"
+            android:text="@string/perfil_button"
             android:textColor="@android:color/white"
             />
 

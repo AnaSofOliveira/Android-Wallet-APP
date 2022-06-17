@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_baseline_add_24"
             fab:fab_colorNormal="@color/colorPrimaryDespesa"
-            app:fab_label="Despesa"
+            app:fab_label="@string/despesa_label"
             fab:fab_size="mini" />
 
         <com.github.clans.fab.FloatingActionButton
@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_baseline_add_24"
-            app:fab_label="Receita"
+            app:fab_label="@string/receita_label"
             fab:fab_colorNormal="@color/colorPrimaryReceita"
             fab:fab_size="mini" />
 
