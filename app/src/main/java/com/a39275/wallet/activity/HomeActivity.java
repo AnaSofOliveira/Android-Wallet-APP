@@ -279,7 +279,6 @@ public class HomeActivity extends AppCompatActivity {
                 logout();
                 break;
             case R.id.menu_config_notif:
-
                 if(validarUserPremium()){
                     startActivity(new Intent(this, NotificacoesActivity.class));
                 }else {

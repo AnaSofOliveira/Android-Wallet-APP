@@ -19,7 +19,7 @@
         <activity
             android:name=".activity.PerfilActivity"
             android:exported="false"
-            android:theme="@style/ReceitaTheme" />
+            android:theme="@style/HomeTheme" />
         <activity
             android:name=".activity.DespesasActivity"
             android:exported="false"
